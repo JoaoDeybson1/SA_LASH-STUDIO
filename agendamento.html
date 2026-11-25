@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agendar horário | SA Lash Studio</title>
+  <meta name="description" content="Agende seu horário no SA Lash Studio: preencha o formulário ou chame direto no WhatsApp.">
+  <meta name="theme-color" content="#0c0c0c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230c0c0c'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23c9a45c' font-family='Georgia,serif'%3ESA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a href="index.html" class="marca" aria-label="SA Lash Studio, página inicial">
+      <span class="marca-sigla">SA</span>
+      <span class="marca-nome">Lash Studio</span>
+    </a>
+    <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#duvidas">Dúvidas</a>
+      <a href="index.html#local">Localização</a>
+    </nav>
+    <a href="index.html" class="btn btn-contorno">Voltar ao site</a>
+  </header>
+
+  <main>
+    <div class="pagina-titulo">
+      <h1>Agende seu horário</h1>
+      <p>Preencha o formulário e a conversa abre no WhatsApp já com o seu pedido. Se preferir, chame direto.</p>
+    </div>
+
+    <section class="secao">
+      <div class="agenda-layout">
+
+        <form class="agendar-form" id="form-agenda">
+          <h3>Peça seu horário</h3>
+          <p>O horário só fica reservado depois da nossa confirmação no WhatsApp.</p>
+          <label class="campo">Seu nome
+            <input type="text" id="f-nome" required autocomplete="name">
+          </label>
+          <label class="campo">Serviço
+            <select id="f-servico" required></select>
+          </label>
+          <div class="linha">
+            <label class="campo">Data de preferência
+              <input type="date" id="f-data">
+            </label>
+            <label class="campo">Período
+              <select id="f-periodo">
+                <option value="">Tanto faz</option>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+              </select>
+            </label>
+          </div>
+          <label class="campo">Observações (opcional)
+            <textarea id="f-obs" rows="3"></textarea>
+          </label>
+          <button class="btn btn-cheio" type="submit">Enviar pelo WhatsApp</button>
+        </form>
+
+        <aside class="agenda-lado">
+          <div class="cartao">
+            <h2>Prefere conversar?</h2>
+            <p>Chame direto no WhatsApp para tirar dúvidas ou combinar o melhor horário.</p>
+            <a href="#" class="btn btn-cheio js-whats" data-msg="Olá! Gostaria de agendar um horário no SA Lash Studio.">Chamar no WhatsApp</a>
+          </div>
+
+          <div class="cartao">
+            <h2>Horário de atendimento</h2>
+            <!-- Troque pelos dados reais -->
+            <p>Segunda a sábado, das 9h às 18h.<br>Atendimento somente com hora marcada.</p>
+          </div>
+
+          <div class="cartao">
+            <h2>Antes de vir</h2>
+            <ul>
+              <li>Venha sem maquiagem nos olhos.</li>
+              <li>Avise se tiver alergia a cola ou cosméticos.</li>
+              <li>Chegue com 10 minutos de antecedência.</li>
+              <li>Para remarcar, avise com antecedência.</li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p class="rodape-nome">SA Lash Studio</p>
+    <p>Extensão de cílios</p>
+    <p><a href="index.html">Página inicial</a> &nbsp;|&nbsp; <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></p>
+    <p class="rodape-copy">&copy; <span id="ano"></span> SA Lash Studio</p>
+  </footer>
+
+  <a href="#" class="whats-flutuante js-whats" data-msg="Olá! Gostaria de agendar um horário no SA Lash Studio." aria-label="Chamar no WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 2 6.800L3 29l6.700-2.200c1.900 1.100 4 1.600 6.300 1.600 7 0 12.700-5.700 12.700-12.700S23 3 16 3zm0 23c-2 0-3.900-.6-5.500-1.600l-.4-.2-4 1.300 1.300-3.900-.3-.4a10.300 10.300 0 0 1-1.600-5.500C5.500 9.900 10.200 5.200 16 5.200S26.500 9.900 26.500 15.700 21.800 26 16 26zm5.700-7.700c-.3-.2-1.800-.9-2.100-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.400 8.400 0 0 1-4.200-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.500 1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.500 1.900.8 2.700.9 3.600.7.600-.1 1.800-.7 2-1.500.3-.7.300-1.300.2-1.500s-.3-.2-.6-.4z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
